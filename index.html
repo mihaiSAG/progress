@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="character">
+            <img id="characterImage" src="character1.png" alt="Character">
+        </div>
+        <div class="habit-container">
+            <div class="habit">
+                <h3>Habit 1</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="progress1"></div>
+                </div>
+                <button id="button1" onclick="updateProgress(1)">+1</button>
+            </div>
+            <div class="habit">
+                <h3>Habit 2</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="progress2"></div>
+                </div>
+                <button id="button2" onclick="updateProgress(2)">+1</button>
+            </div>
+            <div class="habit">
+                <h3>Habit 3</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="progress3"></div>
+                </div>
+                <button id="button3" onclick="updateProgress(3)">+1</button>
+            </div>
+            <div class="habit">
+                <h3>Habit 4</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="progress4"></div>
+                </div>
+                <button id="button4" onclick="updateProgress(4)">+1</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
