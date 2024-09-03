@@ -1,0 +1,13 @@
+users[
+    {
+        name: 
+        pass:
+        habits: [
+            {
+                name:
+                points:
+                lastUpdated:
+            }
+        ]
+    }
+]
