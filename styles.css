@@ -28,21 +28,29 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.progress-section {
+    display: flex;
+    align-items: center;
+}
+
 .progress-bar {
     background-color: #ddd;
     border-radius: 8px;
     overflow: hidden;
-    margin: 10px 0;
     height: 20px;
     width: 100%;
+    margin-left: 10px;
+    position: relative;
 }
 
 .progress {
     height: 100%;
-    background-color: #76c7c0;
     width: 0%;
+    background-size: cover;
+    transition: width 0.5s ease;
 }
 
+/* Button Styles */
 button {
     padding: 10px 20px;
     background-color: #76c7c0;
@@ -55,4 +63,25 @@ button {
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+/* Progress Bar Aesthetics */
+.flame-bar .progress {
+    background-image: url('flames.gif'); /* Replace with actual flame animation or effect */
+    background-color: #ff4500;
+}
+
+.wave-bar .progress {
+    background-image: url('waves.gif'); /* Replace with actual wave animation or effect */
+    background-color: #1e90ff;
+}
+
+.lightning-bar .progress {
+    background-image: url('lightning.gif'); /* Replace with actual lightning animation or effect */
+    background-color: #ffff00;
+}
+
+.star-bar .progress {
+    background-image: url('stars.gif'); /* Replace with actual star animation or effect */
+    background-color: #ff69b4;
 }
