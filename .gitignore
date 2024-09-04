@@ -1,2 +1,5 @@
 # Ignore the /dist directory
 /BE/dist
+BE/dist
+# Node modules
+node_modules/
