@@ -1,0 +1,2 @@
+curl http://localhost:3000/users/1
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"New Exercise","points":12,"lastUpdated":"2024-09-02T10:00:00Z"}' http://localhost:3000/users/1/habits/101

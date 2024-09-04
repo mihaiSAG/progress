@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Mishu",
+        "pass": "password123",
+        "habits": [
+            { "id": "101", "name": "Exercise", "points": 10, "lastUpdated": "2024-09-04T00:00:00Z" },
+            { "id": "102", "name": "Reading", "points": 5, "lastUpdated": "2024-09-04T00:00:00Z" }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Popel",
+        "pass": "password456",
+        "habits": [
+            { "id": "201", "name": "Meditation", "points": 8, "lastUpdated": "2024-09-04T00:00:00Z" },
+            { "id": "202", "name": "Journaling", "points": 7, "lastUpdated": "2024-09-04T00:00:00Z" }
+        ]
+    }
+]
