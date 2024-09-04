@@ -7,3 +7,10 @@ curl -X POST -H "Content-Type: application/json" \
 
 
     curl http://localhost:3000/users/
+
+    curl -X PATCH http://localhost:3000/users/1/habits/101/increment
+
+
+curl -X PATCH -H "Content-Type: application/json" \
+    -d '{"name":"New Habit Name"}' \
+    http://localhost:3000/users/1/habits/101/name

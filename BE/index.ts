@@ -103,6 +103,7 @@ app.post("/register", async (req: Request, res: Response) => {
     }
 });
 
+// Increment habit points by 1
 app.patch("/users/:userId/habits/:habitId/increment", async (req: Request, res: Response) => {
     const userId = req.params.userId;
     const habitId = req.params.habitId;
@@ -114,13 +115,22 @@ app.patch("/users/:userId/habits/:habitId/increment", async (req: Request, res: 
             // Find the habit by ID
             const habit = user.habits.find((h: Habit) => h.id === habitId);
             if (habit) {
-                // Increment the points
-                habit.points += 1;
-                habit.lastUpdated = new Date();
+                const now = new Date();
+                const lastUpdated = new Date(habit.lastUpdated);
 
-                // Save the updated user
-                await user.save();
-                res.json(habit);
+                // Check if 24 hours have passed since the last update
+                const hoursPassed = (now.getTime() - lastUpdated.getTime()) / (1000 * 60 * 60);
+                if (hoursPassed >= 24) {
+                    // Increment the points
+                    habit.points += 1;
+                    habit.lastUpdated = now;
+
+                    // Save the updated user
+                    await user.save();
+                    res.json(habit);
+                } else {
+                    res.status(400).send("Cannot increment. Less than 24 hours have passed since the last update.");
+                }
             } else {
                 res.status(404).send("Habit not found");
             }
