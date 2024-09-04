@@ -3,3 +3,4 @@
 BE/dist
 # Node modules
 node_modules/
+.env

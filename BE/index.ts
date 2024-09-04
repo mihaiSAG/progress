@@ -4,11 +4,19 @@ import { connectDB } from "./db";
 import { UserModel, Habit } from "./models";
 import { IHabit } from "./data";
 import mongoose from "mongoose";
+import * as dotenv from 'dotenv';
+import { apiKeyMiddleware } from "./middleware/apiKeyMiddleware";
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
+
+// Apply the API key middleware to all routes
+//app.use(apiKeyMiddleware);
 
 // Connect to MongoDB
 connectDB();
