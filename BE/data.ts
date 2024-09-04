@@ -1,18 +1,18 @@
-export interface Habit {
+export interface IHabit {
     id: string; // Unique identifier for each habit
     name: string;
     points: number;
     lastUpdated: Date;
 }
 
-export interface User {
+export interface IUser {
     id: string; // Unique identifier for each user
     name: string;
     pass: string;
-    habits: Habit[];
+    habits: IHabit[];
 }
 
-export const users: User[] = [
+export const users: IUser[] = [
     {
         id: "1",
         name: "Mishu",

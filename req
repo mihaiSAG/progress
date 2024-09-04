@@ -1,2 +1,9 @@
 curl http://localhost:3000/users/1
 curl -X PUT -H "Content-Type: application/json" -d '{"name":"New Exercise","points":12,"lastUpdated":"2024-09-02T10:00:00Z"}' http://localhost:3000/users/1/habits/101
+
+curl -X POST -H "Content-Type: application/json" \
+    -d '{"name":"newuser","pass":"newpassword"}' \
+    http://localhost:3000/register
+
+
+    curl http://localhost:3000/users/
